@@ -1,0 +1,16 @@
+Aula 04 MySql:
+------------------------------
+create database cadastro
+default character ser utf8
+default collate utf8_general_ci;
+
+create table pessoas (
+	id int NOT NULL AUTO_INCREMENT,
+	nome varchar(30) NOT NULL,
+	nascimento date,
+	sexo enum('M','F'),
+	peso decimal (5,2),
+	altura (3,2),
+	nacionalidade varchar(20) default 'Brasil',
+	PRIMARY KEY (id)
+) default charset = utf8;

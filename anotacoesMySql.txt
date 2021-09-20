@@ -1,0 +1,63 @@
+Forma de armazenamento : 
+Fixas = Registros 
+Pastas = Tabelas 
+Gaveta = Arquivos 
+
+//Tabelas guardam registros de ítens com 
+características semelhantes 
+
+Tipos de Arquivos 
+Arquivos Sequenciais : acessados sequencialmente
+Arquivos de acesso Diretos : acessados e 
+armazenados de forma direta
+
+Tipos 
+*Numérico - Inteiro - TinyInt, SmallInt
+		      Int, MediumInt, BigInt
+	  - Real - Decimal, Float, Double, Real
+	  - Lógico - Bit, Boolean.
+
+* Data/Tempo - Date - 
+	     - DateTime - 
+	     - TimeStamp - 
+	     - Time - 
+	     - Year - 
+
+* Literal - Caractere - Char, VarChar(mais usado)
+	  - Texto - TinyText, Text, MediumText,
+		    LongText.
+	  - Binário - TinyBlob, Blob, MediumBlob,
+		    LongBlob(img)
+	  - Coleção - Enum, Set
+
+*Espacial - Geometry, Point, Polygon,
+	    MultiPolygon.
+
+Comandos 
+Create Table - criar tabela;
+use (nome da tabela); - ativa a tabela
+describe - descreve os registros e suas variáveis 
+after - para definir a ordem de uma coluna recém inserida
+first - para definir a coluna como a primeira
+modify - para alterar a formatação da tabela
+change - para alterar nome da coluna (precisa colocar nome antigo)
+rename to - modificar o nome da tabela 
+
+
+Situações 
+
+*Para evitar que se cadastre duas vezes a mesma pessoa = 
+id int not null auto_increment,
+...
+...
+ao final ..
+primary key(id) //este não aceitará se todos os elementos forem iguais 
+UNIQUE - não permite que se coloque o mesmo nome na mesma coluna
+
+*Para não permitir que seja registrado um valor negativo = UNSIGNED (sem sinal)
+
+*Estipular um padrão caso campo não seja preenchido = default
+
+*Formatar casas decimais = decimal (5,2) 000,00
+
+
