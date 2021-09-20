@@ -1,2 +1,2 @@
 # MySQL
- all class Curso em Video
+Todo aprendizado do curso de MySql do Curso em Video, professor Gustavo Guanabara. 
