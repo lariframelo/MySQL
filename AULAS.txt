@@ -1,4 +1,6 @@
+------------------------------
 Aula 04 MySql:
+CREATE DATABASE, CREATE TABLE
 ------------------------------
 create database cadastro
 default character ser utf8
@@ -14,3 +16,60 @@ create table pessoas (
 	nacionalidade varchar(20) default 'Brasil',
 	PRIMARY KEY (id)
 ) default charset = utf8;
+
+
+------------------------------
+Aula 05 MySql:
+INSERT INTO
+------------------------------
+INSERT INTO pessoas
+(id, nome, nascimento, sexo, peso, altura,
+nacionalidade)
+VALUES
+('1','Godofredo','1984-01-02','M','78.5',
+'1.83','Brasil');
+
+//se acaso os dados já estiverem na ordem original 
+pode encurtar para 
+//e como na construção da tabela 'id' tem a constrage 
+AUTO_INCREMENT, não precisamos adicionar o valor do 'id'
+
+INSERT INTO pessoas VALUES 
+('Godofredo','1984-01-02','M','78.5',
+'1.83','Brasil');
+
+
+------------------------------
+Aula 06 MySql:
+ALTER TABLE e DROP TABLE
+------------------------------
+describe pessoas;
+alter table pessoas 
+add column profissao varchar(10);//adicionei uma coluna
+
+alter table pessoas 
+DROP column profissao;//eliminei uma coluna
+
+alter table pessoas 
+add column profissao varchar(10) after nome;//adicionei uma coluna após o nome
+
+alter table pessoas 
+add column codigo int FIRST; //adicionei uma coluna na primeira posição
+
+alter table pessoas 
+modify column profissao varchar(20);//modificar uma coluna ou a estrutura dela 
+modify column profissao varchar(20) NOT NULL DEFAULT ' ';//para aceitar os cadastros já feitos e estabelecer um parâmetro obrigatório
+
+alter table pessoas 
+change column profissao prof varchar(20);//trocar o nome da coluna 
+
+alter table pessoas 
+rename to gafanhotos;//mudar o nome da tabela 
+
+CREATE TABLE IF NOT EXISTS cursos (
+	nome varchar(30) NOT NULL UNIQUE, //não permite o registro duplicado do nome
+	descricao text,
+	carga int UNSIGNED,//não permite número negativo
+	totalaulas int,
+	ano year DEFAULT '2016'
+	) DEFAULT CHARSET = utf8;

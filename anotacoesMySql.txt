@@ -11,7 +11,7 @@ Arquivos Sequenciais : acessados sequencialmente
 Arquivos de acesso Diretos : acessados e 
 armazenados de forma direta
 
-Tipos 
+Tipos de dados:
 *Numérico - Inteiro - TinyInt, SmallInt
 		      Int, MediumInt, BigInt
 	  - Real - Decimal, Float, Double, Real
@@ -32,16 +32,40 @@ Tipos
 
 *Espacial - Geometry, Point, Polygon,
 	    MultiPolygon.
+------------------------------
+Constreins
 
+NOT NULL - não aceita vazio 
+DEFAULT - padrão, caso não seja inserido
+AUTO_INCREMENT - vai contabilizando +1 a cada cadastro 
+IF NOT EXISTS / IF EXISTS - caso não exista, caso exista
+UNIQUE - não deixar registrar o mesmo nome 2x
+UNSIGNED - não deixar ter um valor negativo
+
+------------------------------
+DDL - Data Definition Language
+	* CREATE DATE // criar banco de dados
+	* CREATE TABLE // criar tabela
+	* ALTER TABLE // comandos para alterar estrutura da tabela
+	* DROP TABLE // remover banco inteiro e tabelas
+
+DML - Data Manipulation Language
+	* INSERT INTO // inserir dados na tabela
+	* UPDATE
+	* DELETE
+	* TRUCATE //limpar dados da tabela 
+
+------------------------------
 Comandos 
-Create Table - criar tabela;
 use (nome da tabela); - ativa a tabela
 describe - descreve os registros e suas variáveis 
+
 after - para definir a ordem de uma coluna recém inserida
-first - para definir a coluna como a primeira
+first - para definir a coluna como a primeira na ordem
 modify - para alterar a formatação da tabela
 change - para alterar nome da coluna (precisa colocar nome antigo)
 rename to - modificar o nome da tabela 
+
 
 
 Situações 
