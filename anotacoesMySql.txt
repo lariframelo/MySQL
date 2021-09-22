@@ -48,13 +48,13 @@ DDL - Data Definition Language
 	* CREATE DATE // criar banco de dados
 	* CREATE TABLE // criar tabela
 	* ALTER TABLE // comandos para alterar estrutura da tabela
-	* DROP TABLE // remover banco inteiro e tabelas
+	* DROP TABLE // remover banco inteiro, tabelas e formatação.                                                                                                                                 
 
 DML - Data Manipulation Language
 	* INSERT INTO // inserir dados na tabela
-	* UPDATE
-	* DELETE
-	* TRUCATE //limpar dados da tabela 
+	* UPDATE // editar linhas da tabela
+	* DELETE // deleta linha;
+	* TRUCATE //limpar dados da tabela sem excluir formatação
 
 ------------------------------
 Comandos 
