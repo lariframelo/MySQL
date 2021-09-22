@@ -110,3 +110,13 @@ UPDATE cursos
 SET nome = 'Java', carga = '40', ano = '2015'
 WHERE idcurso = '5'
 LIMIT 1; // limitar o número de linhas afetadas
+
+UPDATE cursos
+SET ano = '2050', carga = '800'
+WHERE ano = '2018' //afeta todos que estiverem com esse dado,
+		   //considerado muito perigoso e pode ser barrado pelo sistema
+
+DELETE FROM cursos 
+WHERE idcurso='8';//excluir linha inteira
+
+TRUNCATE TABLE cursos;//limpa a tabela sem excluir a formatação;
