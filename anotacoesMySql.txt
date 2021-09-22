@@ -41,6 +41,7 @@ AUTO_INCREMENT - vai contabilizando +1 a cada cadastro
 IF NOT EXISTS / IF EXISTS - caso não exista, caso exista
 UNIQUE - não deixar registrar o mesmo nome 2x
 UNSIGNED - não deixar ter um valor negativo
+LIMIT - para definir o número de linhas afetadas pelo comando
 
 ------------------------------
 DDL - Data Definition Language
