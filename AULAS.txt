@@ -236,9 +236,75 @@ mulheres que nasceram fora do Brasil e entre
 Aula 13 MySql: Select Parte 3
 Função de agrupamento
 ------------------------------
+Agrupamento de registros :
+SELECT carga FROM cursos 
+GROUP BY carga;//mostra as categorias em grupos != do DISTINCT que 
+só mostra as categorias registradas ignorando a quantidade de cada uma 
+
+SELECT carga,COUNT(nome) FROM cursos 
+GROUP BY carga;//agrupa e conta 
+
+SELECT totaulas, count(*) from cursos
+group by totaulas 
+order by totaulas;//agrupa e conta
 
 
+SELECT carga, COUNT(nome) FROM cursos
+GROUP BY carga
+HAVING COUNT(nome) > 3;//mostra somente quem tem + de 3 
+no seu grupo.// having é condicional para count ex: mostrar 
+count acima de 3.
 
+select ano, count(*) from cursos //conta
+where totaulas > 30 // filtra 
+group by ano // agrupa
+having ano > 2013 // condiciona agrupamento
+order by count(*) desc; // ordena
+
+select avg(carga) from cursos;
+
+
+//mostrar cursos que tenham um valor acima
+da média 
+select carga, count(*) from cursos
+where ano > 2015
+group by carga
+having carga > (select avg(carga) from cursos); // solução durável para mostrar 
+quem está acima da média 
+
+-----------------------------------------------------//EXERCÍCIOS
+1 - Uma lista com as profissões dos gafanhotos
+e seus respectivos quantitativos.
+
+	SELECT profissao, count(*) from gafanhotos
+	group by profissao;
+-----------------------------------------
+2 - Quantos gafanhotos homens e mulheres 
+nasceram após 01/Jan/2005?
+
+	SELECT sexo, count(*) from gafanhotos WHERE nascimento > '2005/01/01' group by sexo;
+-----------------------------------------
+3 - Uma lista com os gafanhotos que nasceram
+fora do Brasil, mostrando o país de origem 
+e o total de pessoas nascidas lá. Só nos interessam
+os países que tiveram mais de 3 gafanhotos com 
+essa nacionalidade"
+
+	SELECT nacionalidade, count(*) from gafanhotos
+	WHERE nacionalidade <> 'Brasil'
+	GROUP BY nacionalidade
+	HAVING count(*)>3;
+------------------------------------------
+4 - Uma lista agrupada pela altura dos gafanhotos,
+mostrando quantas pessoas pesam mais de 100kg e 
+que estão acima da média de altura de todos os 
+cadastrados.
+
+	SELECT altura, count(*) from gafanhotos
+	WHERE peso > 100
+	GROUP BY altura
+	HAVING altura >(SELECT avg(altura) from gafanhotos);
+----------------------------------------------------//FIM DOS EXERCÍCIOS 
 
 
 
