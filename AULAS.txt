@@ -120,3 +120,43 @@ DELETE FROM cursos
 WHERE idcurso='8';//excluir linha inteira
 
 TRUNCATE TABLE cursos;//limpa a tabela sem excluir a formatação;
+
+------------------------------
+Aula 10 MySql: Select Parte 1
+------------------------------
+Select * from cursos
+ORDER by nome; //ordenar exibição pela coluna nome
+Select * from cursos
+ORDER by nome DESC;//ordem inversa
+	      ASC // ordem crescente 
+
+* = todos 
+
+Select nome, carga, ano from cursos
+ORDER by nome;// selecionar dados de colunas especÍficas
+
+Select nome, carga, ano from cursos
+ORDER by ano, nome; // define uma ordem secundária de organização 
+
+Select * from cursos
+where ano = '2016'
+order by name;//selecionar linhas
+
+Select * from cursos
+where ano <= '2016'
+order by ano,name; //uso de operadores relacionais
+
+Select * from cursos
+where ano between '2014' and '2016';
+
+Select * from cursos
+where ano in (2014,2016);
+
+select * from cursos
+where carga > 35 AND totaulas < 30;// and equivale a &&
+
+select * from cursos
+where carga > 35 OR totaulas < 30;// OR equivale ||
+
+
+

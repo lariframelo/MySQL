@@ -56,6 +56,8 @@ DML - Data Manipulation Language
 	* DELETE // deleta linha;
 	* TRUCATE //limpar dados da tabela sem excluir formatação
 
+DQL - Data Query Language
+	* SELECT // selecionar dados
 ------------------------------
 Comandos 
 use (nome da tabela); - ativa a tabela
