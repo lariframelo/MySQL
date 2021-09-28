@@ -159,4 +159,49 @@ select * from cursos
 where carga > 35 OR totaulas < 30;// OR equivale ||
 
 
+------------------------------
+Aula 11 MySql: Select Parte 2
+Função de agregação 
+------------------------------
+Select * from cursos
+where nome LIKE 'P%'; //selecionar cursos que começam com P
+
+LIKE = parecido, operador 
+% = coringa, substituí vários ou nenhum. Representa 
+_ = coringa, mas exige que tenha um caractere, NOT NULL 
+
+DISTINCT
+select distinct nacionalidade from gafanhotos; // apresenta uma lista de cada ítem cadastrado sem repetir 
+
+select COUNT(*) from cursos; // conta tudo
+select COUNT(*) from cursos 
+where carga < 30;
+
+select MAX(carga) from cursos;// mostra o maior
+
+MIN = mostra o mínimo 
+
+SUM = somar 
+
+AVG = média 
+
+Exercícios :
+1 - Uma lista com o nome de todos os gafanhotas - F
+2 - Uma lista com os dados de todos aqueles que nasceram
+entre 1/Jan/2000 e 31/Dez/2015
+3 - Uma lista com o nome de todos os homens que trabalham
+como Programadores 
+4 - Uma lista com os dados de todas as mulheres 
+que nasceram no Brasil e que têm seu nome 
+iniciando com a letra J
+5 - Uma lista com o nome e nacionalidade de 
+todos os homens que têm Silva no nome, 
+não nasceram no Brasil e pesam menos de 100kg
+6 - Qual é a maior altura entre gafanhotos 
+homens que moram no Brasil?
+7 - Qual a média de pesos dos gafanhotos
+8 - Qual o menos peso entra as gafanhotos 
+mulheres que nasceram fora do Brasil e entre 
+01/Jan/1990 e 31/Dez/2000?
+9 - Quantas gafanhotos mulheres tem mais de 1.90m de altura ?
 
