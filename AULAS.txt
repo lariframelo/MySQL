@@ -307,7 +307,10 @@ cadastrados.
 ----------------------------------------------------//FIM DOS EXERCÍCIOS 
 
 
-
+------------------------------
+Aula 13 MySql: Select Parte 3
+Função de agrupamento
+------------------------------
 
 
 
