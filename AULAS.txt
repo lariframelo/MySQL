@@ -122,7 +122,7 @@ WHERE idcurso='8';//excluir linha inteira
 TRUNCATE TABLE cursos;//limpa a tabela sem excluir a formatação;
 
 ------------------------------
-Aula 10 MySql: Select Parte 1
+Aula 11 MySql: Select Parte 1
 ------------------------------
 Select * from cursos
 ORDER by nome; //ordenar exibição pela coluna nome
@@ -160,7 +160,7 @@ where carga > 35 OR totaulas < 30;// OR equivale ||
 
 
 ------------------------------
-Aula 11 MySql: Select Parte 2
+Aula 12 MySql: Select Parte 2
 Função de agregação 
 ------------------------------
 Select * from cursos
@@ -185,23 +185,79 @@ SUM = somar
 
 AVG = média 
 
-Exercícios :
+-----------------------------------------------------//EXERCÍCIOS
 1 - Uma lista com o nome de todos os gafanhotas - F
+
+	SELECT nome FROM `gafanhotos` WHERE sexo = 'F';
+-----------------------------------------------------	
 2 - Uma lista com os dados de todos aqueles que nasceram
 entre 1/Jan/2000 e 31/Dez/2015
+
+	SELECT * from gafanhotos WHERE nascimento between '2000/01/01' and '2015/12/31';
+-----------------------------------------------------
 3 - Uma lista com o nome de todos os homens que trabalham
 como Programadores 
+
+	SELECT nome from gafanhotos WHERE profissao = 'programador' and sexo = 'M';
+-----------------------------------------------------
 4 - Uma lista com os dados de todas as mulheres 
 que nasceram no Brasil e que têm seu nome 
 iniciando com a letra J
+	
+	SELECT * from gafanhotos WHERE sexo = 'F' and nacionalidade = 'Brasil' and nome LIKE 'J%';
+----------------------------------------------------
 5 - Uma lista com o nome e nacionalidade de 
 todos os homens que têm Silva no nome, 
 não nasceram no Brasil e pesam menos de 100kg
+
+	SELECT nome, nacionalidade from gafanhotos WHERE nome like ('%Silva%') and nacionalidade <> 'Brasil' and peso < 100;
+----------------------------------------------------
 6 - Qual é a maior altura entre gafanhotos 
 homens que moram no Brasil?
+
+	SELECT MAX(altura) from gafanhotos WHERE nacionalidade = 'Brasil';
+----------------------------------------------------
 7 - Qual a média de pesos dos gafanhotos
-8 - Qual o menos peso entra as gafanhotos 
+
+	SELECT AVG(peso) from gafanhotos;
+----------------------------------------------------
+8 - Qual o menor peso entra as gafanhotos 
 mulheres que nasceram fora do Brasil e entre 
 01/Jan/1990 e 31/Dez/2000?
+
+	SELECT MIN(peso) from gafanhotos WHERE sexo = 'F' and nacionalidade <> 'Brasil' and nascimento between '1990/01/01' and '2000/12/31';
+-----------------------------------------------------
 9 - Quantas gafanhotos mulheres tem mais de 1.90m de altura ?
+
+	SELECT COUNT(*) from gafanhotos WHERE sexo = 'F' and altura > 1.90;
+----------------------------------------------------- //FIM DOS EXERCÍCIOS 
+
+------------------------------
+Aula 13 MySql: Select Parte 3
+Função de agrupamento
+------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
