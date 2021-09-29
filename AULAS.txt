@@ -308,11 +308,30 @@ cadastrados.
 
 
 ------------------------------
-Aula 13 MySql: Select Parte 3
-Função de agrupamento
+Aula 14 MySql: Modelos Relacionais 
 ------------------------------
+Modelos Relacionais nada mais é do que 
+bancos que conversam entre si dependendo
+da demanda de ação da pessoa que está em 
+um determinado banco. Ex: meus dados estão 
+em um banco, eu compro um celular que está
+cadastrado em um outro banco, logo se estabelece
+um terceiro banco de dados: o de compra, 
+detalhando as informações essenciais daquela
+ação. 
 
-
+*Conceitos:
+Entidade - GRUPO DE DADOS (tabela);
+Atributo - DADOS (colunas);
+Tupla - Conteúdo da coluna ; 
+Chave primária - identifica, diferencia as tuplas;
+Chave estrangeira - chave primária que veio de outro banco;
+Relacionamento - ação feita que une os dois bancos;
+Cardinalidade - quantidades de relacionamentos;
+DER - Diagrama Entidade Relacionamento
+	* Muitos-para-muitos 
+	* Um-para-um
+	* Um-para-muitos
 
 
 

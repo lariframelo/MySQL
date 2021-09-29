@@ -87,4 +87,11 @@ UNIQUE - não permite que se coloque o mesmo nome na mesma coluna
 
 *Formatar casas decimais = decimal (5,2) 000,00
 
-
+MODELOS RELACIONAIS 
+------------------
+ENTIDADES - Banco de dados
+ATRIBUTOS - tuplas
+RELACIONAMENTOS - relação entre bancos
+ * MUITOS-PARA-MUITOS
+ * UM-PARA-UM
+CARDINALIDADE - Número de envolvidos 
