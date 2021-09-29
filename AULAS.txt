@@ -333,11 +333,59 @@ DER - Diagrama Entidade Relacionamento
 	* Um-para-um
 	* Um-para-muitos
 
+------------------------------
+Aula 14 MySql: Chaves Estrangeiras e JOIN
+------------------------------
+
+ALTER TABLE gafanhotos
+ADD COLUMN cursopreferido int;//adicionar a coluna
+
+ALTER TABLE gafanhotos
+ADD FOREIGN KEY (cursopreferido)//adiciona chave estrangeira
+REFERENCES cursos(idcurso);//comunica com quem a tupla vai se relacionar
+
+//cadastrar cursos preferidos 
+update gafanhotos set cursopreferido = '6' 
+where id = '1';
+
+//mostrar não só a chave primária mas o nome de cada curso 
+select gafanhotos.nome, gafanhotos.cursopreferido, cursos.nome,cursos.ano from gafanhotos join cursos
+on cursos.idcurso = gafanhotos.cursopreferido; // para relacionar de forma inteligente
+
+INNER JOIN - mostra somente os cadastros envolvidos com a relação;
+as = apelido de coluna 
+ex: gafanhotos as g
+
+OUTER JOIN - tratar os dados do INNER que não 
+tem a ver com a relação
+ex: select g.nome, c.nome, c.ano
+from gafanhotos left outer join cursos 
+on c.idcurso = g.cursopreferido
+order by nome; // mostrou todos os nomes à esquerda, deu preferência ao nome.
+
+------------------------------
+Aula 14 MySql: INNER JOIN com várias tabelas
+------------------------------
+CREATE TABLE gafanhoto_assiste_curso
+	id int NOT NULL AUTO_INCREMENT,
+	data date,
+	idgafanhoto int,
+	idcurso int,
+	PRIMARY KEY(id),
+	FOREIGN KEY (idgafanhoto) REFERENCES gafanhotos(id),
+	FOREIGN KEY (idcurso) REFERENCES cursos(idcurso)
+) DEFAULT CHARSET = utf8;
 
 
+INSERT INTO gafanhoto_assiste_curso VALUES 
+(DEFAULT, '2014-03-01','1','2');
 
-
-
+select * from gafanhotos g
+JOIN gafanhoto_assiste_curso a
+on g.id = a.idgafanhoto
+JOIN cursos c 
+ON a.idcurso = c.idcurso
+order by g.nome;
 
 
 
